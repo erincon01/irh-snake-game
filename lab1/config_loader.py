@@ -5,9 +5,11 @@ class Config:
         self.width = 800
         self.height = 600
         self.title = 'Pyglet Game'
-        self.movement = 5
-        self.circle_size = 50
+        self.x_step = 5
+        self.y_step = 5
+        self.object_size = 50
         self.direction = 'right'
+        self.objects_count = 100
 
     def load_config(self, file_path):
         """
@@ -21,9 +23,11 @@ class Config:
             self.width = int(config['Configuracion Pantalla']['width'])
             self.height = int(config['Configuracion Pantalla']['height'])
             self.title = config['Configuracion Pantalla']['title']
-            self.movement = int(config['Configuracion Pantalla']['movement'])
-            self.circle_size = int(config['Configuracion Pantalla']['circle_size'])
-            self.direction = config['Configuracion Pantalla']['direction']
+            self.x_step = int(config['Configuracion Pantalla']['x_step'])
+            self.y_step = int(config['Configuracion Pantalla']['y_step'])
+            self.object_size = int(config['Configuracion Pantalla']['object_size'])
+            self.objects_count = int(config['Configuracion Pantalla']['objects_count'])
+
         except KeyError as e:
             print(f"Error: Missing key {e} in the configuration file.")
         except ValueError as e:

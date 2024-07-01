@@ -3,18 +3,19 @@ from config_loader import Config
 from event_handler import EventHandler
 from object_creator import create_objects
 
-# Definir la variable global config
-config = Config()
-
 def main():
     # Cargar configuración desde el archivo
-    config.load_config('config.ini')
+    config = Config()
+    config.load_config('.\\lab1\config.ini')
 
     # Crear ventana
-    window = pyglet.window.Window(width=config.width, height=config.height, caption=config.title)
-
-    pyglet.gl.glClearColor(0.0, 0.0, 0.2, 1.0)    
-
+    window = pyglet.window.Window(width=config.width, 
+                                  height=config.height, 
+                                  caption=config.title)
+    
+    # Establecer el color de fondo de la ventana en azul oscuro
+    pyglet.gl.glClearColor(0.1, 0.1, 0.3, 1.0)
+    
     # Crear objetos del juego
     objects = create_objects(config)
     
