@@ -1,14 +1,13 @@
-
-
 # my fist game: Snake Game
 
-## Description
+## Descripción
 
-describe what the application does
+he creado esta aplicación con propósito de aprendizaje.
+cada directorio tendrá una versión funcional con su propio propósito.
 
-## Structure
+## Estructura
 
-describe the purpose of each file:
+Descripción de que se hace en cada archivo:
 - main.py
 
     - se llama a la función config_loader para cargar desde config.ini la configuración.
